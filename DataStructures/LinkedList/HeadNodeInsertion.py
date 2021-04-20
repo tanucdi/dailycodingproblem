@@ -35,6 +35,7 @@ class LinkedList:
     #change the next of newnode to head node and head node to newnode
     def HeadNodeInsert(self,newdata):
         newheadnode = Node(newdata)
+        
         newheadnode.next=self.head
         self.head=newheadnode
     #------------------------------------------------------------------------------
