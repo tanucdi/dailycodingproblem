@@ -30,14 +30,15 @@ class LinkedList:
                 last = last.next
             last.next = newnode
     
+    #---------------------------------------------------------------IT IS ADDED
+    #create a function to insert a node at  begining 
+    #change the next of newnode to head node and head node to newnode
     def HeadNodeInsert(self,newdata):
         newheadnode = Node(newdata)
+        newheadnode.next=self.head
+        self.head=newheadnode
+    #------------------------------------------------------------------------------
 
-        if self.head == None:
-            self.head = newheadnode
-        else:
-            newheadnode.next=self.head
-            self.head=newheadnode
     #create a function to print our linked list
     #traverse through linked list and print data
     def PrintLinkedList(self):
@@ -49,8 +50,6 @@ class LinkedList:
 
 #create an object of linked list
 linkedlist = LinkedList()
-linkedlist.insert(203)
-linkedlist.insert(927)
-linkedlist.HeadNodeInsert(2)
 linkedlist.HeadNodeInsert(13)
+linkedlist.HeadNodeInsert(9)
 linkedlist.PrintLinkedList()
