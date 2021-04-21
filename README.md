@@ -4,11 +4,17 @@
 ALSO THIS REPO CONTAINS DATA STRUCTURE.     (Im gonna update this daily.)
 
 CURRENTLY 
+
 ------------------LINKED LIST IS PRESENT---------------
+
 CREATION
+
 INSERTION
+
 DELETION
+
 REVERSE
+
 
 AND SOME QUESTIONS ON LINKED LIST.
 
