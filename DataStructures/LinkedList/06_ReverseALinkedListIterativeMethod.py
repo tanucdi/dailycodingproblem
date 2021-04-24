@@ -49,6 +49,7 @@ class LinkedList:
         #and last head contain the next of #4 and so on
         self.head = previous
     
+    
     #create a function to print our linked list
     #traverse through linked list and print data
     def PrintLinkedList(self):
