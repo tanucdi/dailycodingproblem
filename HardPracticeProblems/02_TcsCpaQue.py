@@ -1,3 +1,4 @@
+#TCS CPA DAY 2QUESTION SOLVED.
 class Property:
     def __init__(self,property_type,property_value,max_bid_price):
         self.property_type = property_type
