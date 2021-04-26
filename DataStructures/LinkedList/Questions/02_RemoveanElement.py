@@ -30,26 +30,34 @@ class LinkedList:
                 last = last.next
             last.next = newnode
     
-    #----------------------------------------------------------CREATED
-    #create a function to reverse list for that we have to change the direction of next of node to prev
-    #for that we create a prevnode in which we start putting the nodes through iterating the linked list.
-    def ReverseLinkedList(self):
-        previous = None
-        while self.head:
-            #to store the current head #1
-            currentnode = self.head
-            #now change the head  #1 --> #2
-            self.head = self.head.next
-            #now current node is #1 and we have to add the address of previous node to its next
-            currentnode.next = previous
-            #now current node has #1 and in its next previous node i.e. #2 | so append the currentnode to prev.
-            previous = currentnode
+    #writing function to remov element appearing single time or multiple time 
+    def RemoveElement(self,val):
+        #if we have to remove element present at the head node
+        if self.head.data==val:
+            self.head=self.head.next
         
-        #now the linked list is #1 <-- #2 <-- #3 <-- #4 <-- #5 <-- HEAD (we put the head pointer to last)
-        #and last head contain the next of #4 and so on
-        self.head = previous
+        #creating three pointers - prev | current | nxt 
+        #initially all pointing at head node
+        nxt=self.head
+        prev,current = nxt,self.head
 
-    
+        #iterating using current node
+        while current:
+            #nxt will contain the next node
+            nxt=current.next
+            
+            #if we got the value then we put the next node to prev node -- now link of prev to current node 
+            #has been broken. But next of cuurent still poitning to next so we assign next to the current.
+            if current.data==val:
+                prev.next=nxt
+            else:
+                #prev shifted towards right
+                prev = current
+            current=nxt
+        return nxt
+
+
+
     #create a function to print our linked list
     #traverse through linked list and print data
     def PrintLinkedList(self):
@@ -58,13 +66,11 @@ class LinkedList:
             print(current.data)
             current=current.next
 
-
 #create an object of linked list
 linkedlist = LinkedList()
 linkedlist.insert(1)
+linkedlist.insert(6)
 linkedlist.insert(2)
-linkedlist.insert(3)
-linkedlist.insert(4)
-linkedlist.insert(5)
-linkedlist.ReverseLinkedList()
+linkedlist.insert(6)
+linkedlist.RemoveElement(1)
 linkedlist.PrintLinkedList()

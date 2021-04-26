@@ -101,6 +101,7 @@ class LinkedList:
         while True:
             if currentnode.next == None:
                 previousnode.next = None
+                del currentnode
                 break
             previousnode = currentnode
             currentnode = currentnode.next
@@ -117,5 +118,7 @@ class LinkedList:
 #create an object of linked list
 linkedlist = LinkedList()
 linkedlist.HeadNodeInsert(2)
+linkedlist.insert(3)
+linkedlist.insert(4)
 linkedlist.DeleteAtEnd()
 linkedlist.PrintLinkedList()

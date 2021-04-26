@@ -129,7 +129,41 @@ class LinkedList:
             currentnode = currentnode.next
 
     #deleting a node at a particular position
-    def DeleteAtPos(self,position):
+    def DeleteAtPosFromEnd(self,position):
+        #if position is invalid
+        if position < 0 or position >= self.LengthOfList():
+            print('Invalid Position !!!!')
+            return
+
+        if self.islistempty() is False:
+            #if position is zero
+            if position == 0:
+                self.DeleteHead()
+                return
+
+            currentnode = self.head
+            #changing the positon will make it from the end
+            position=self.LengthOfList()-position
+            currentpos = 0
+
+            while True:
+                if currentpos == position:
+                    #we have to make the next of previous node = next of cuurent node 
+                    #and make the next of current to NONE.
+                    previousnode.next = currentnode.next
+                    currentnode.next = None
+                    del currentnode
+                    break
+
+                previousnode = currentnode
+                currentnode = currentnode.next
+                currentpos += 1
+        else:
+            print('Linked list is Empty. Try Inserting a node.')
+        
+
+        #deleting a node at a particular position
+    def DeleteAtPosFromStart(self,position):
         #if position is invalid
         if position < 0 or position >= self.LengthOfList():
             print('Invalid Position !!!!')
@@ -150,6 +184,7 @@ class LinkedList:
                     #and make the next of current to NONE.
                     previousnode.next = currentnode.next
                     currentnode.next = None
+                    del currentnode
                     break
 
                 previousnode = currentnode
@@ -171,10 +206,14 @@ class LinkedList:
 linkedlist = LinkedList()
 linkedlist.HeadNodeInsert(1)
 linkedlist.insert(3)
-linkedlist.InsertAtPos(2,1)
-linkedlist.DeleteAtPos(1)
-linkedlist.DeleteAtEnd()
-linkedlist.DeleteHead()
-linkedlist.insert(1)
-linkedlist.DeleteList()
+linkedlist.insert(4)
+linkedlist.insert(5)
+linkedlist.insert(6)
+# linkedlist.InsertAtPos(2,1)
+linkedlist.DeleteAtPosFromStart(3)  #after this list got updated
+linkedlist.DeleteAtPosFromEnd(3)
+# linkedlist.DeleteAtEnd()
+# linkedlist.DeleteHead()
+# linkedlist.insert(1)
+# linkedlist.DeleteList()
 linkedlist.PrintLinkedList()
