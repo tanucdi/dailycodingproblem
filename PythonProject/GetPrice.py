@@ -1,14 +1,15 @@
-def TicektPrice(i,j,ts):
+#returns the price of the selected seat.
+def TicektPrice(i,j,ts,r):
     if ts<=60:
         Price=10
     else:
-        if i%2==0:
-            if i<=i//2:
+        if r%2==0:
+            if i<=r//2:
                 Price=10
             else:
                 Price=8
         else:
-            if i<=i//2:
+            if i<=r//2:
                 Price=10
             else:
                 Price=8
