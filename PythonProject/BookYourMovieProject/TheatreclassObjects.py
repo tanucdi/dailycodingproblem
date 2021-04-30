@@ -38,10 +38,13 @@ class Theatre:
 
 
     def BuyTicket(self):
-        print('Enter the row-seat number ?')
-        print('Eg 1-3 = Row 1 and Seat 3')
-        r,s=input().split('-')
-        self.BookSeat(int(r),int(s))
+        try:
+            print('Enter the row-seat number ?')
+            print('For Example 1-3 = Row 1 and Seat 3')
+            r,s=input().split('-')
+            self.BookSeat(int(r),int(s))
+        except:
+            print('Please Provide Seats In The Defined Format.')
 
     def BookSeat(self,r,s):
         if self.a[r-1][s-1]!='B':

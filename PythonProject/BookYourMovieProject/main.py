@@ -5,9 +5,13 @@ color = DesignColors.Fonts()
 
 #---------------------------------------------------------------------------#
 print(color.BOLD + color.WHITE +'Lets Start With Creating The Sitting Space For The Cinema'+ color.END)
-rows = int(input(color.BOLD + color.WHITE +"Enter the number of rows:"+ color.END))
-seats = int(input(color.BOLD + color.WHITE +"Enter the number of seats per row:"+ color.END))
-sc=TheatreclassObjects.Theatre(rows,seats)
+try:
+    rows = int(input(color.BOLD + color.WHITE +"Enter the number of rows:"+ color.END))
+    seats = int(input(color.BOLD + color.WHITE +"Enter the number of seats per row:"+ color.END))
+    sc=TheatreclassObjects.Theatre(rows,seats)
+except:
+    print('Please Provide Number As Input')
+    exit()
 #----------------------------------------------------------------------------#
 
 print(color.BOLD + color.RED + 'WELCOME TO THE TANISHQ CINEMAS'+ color.END)
