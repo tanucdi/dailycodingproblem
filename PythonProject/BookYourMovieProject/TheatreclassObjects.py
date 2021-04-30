@@ -5,28 +5,36 @@ color=DesignColors.Fonts()
 class Theatre:
     def __init__(self,rows,seats):
         self.rows=rows
+        self.seats=seats
         self.ticketpurchased=0
         self.ticketpercentage=0
         self.currentincome=0
         self.totalseats=self.rows*seats
         self.totalincome =0
         self.users={}
-        self.a = [['S' for i in range(self.rows)] for j in range(seats)]
+        self.a = [['S' for i in range(self.rows+1)] for j in range(self.seats-1)]
         if self.totalseats<=60:
             self.totalincome=self.totalseats*10
         else:
             if rows%2:
-                self.totalincome=(self.rows//2)*seats*10 + (self.rows//2)*seats*8
+                self.totalincome=(self.rows//2)*self.seats*10 + (self.rows//2)*self.seats*8
             else:
                 r=self.rows//2
                 y=self.rows-r
-                self.totalincome=r*seats*10 + y*seats*8
+                self.totalincome=r*self.seats*10 + y*self.seats*8
 
     def PrintCinema(self):
-        for i in range(len(self.a)) : 
-            for j in range(len(self.a[i])) : 
-                print(self.a[i][j], end=" ")
-            print()
+        m = 0
+        b = 0
+        print(end="  ")
+        for i in range(1,self.seats+1) :
+            b = b + 1
+            print(b, end=" ")
+        print()
+        for j in self.a:
+            m = m + 1
+            print(m, end=" ") 
+            print(" ".join(j), sep=",")
 
 
     def BuyTicket(self):

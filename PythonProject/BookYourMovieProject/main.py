@@ -4,16 +4,16 @@ import TheatreclassObjects
 color = DesignColors.Fonts()
 
 #---------------------------------------------------------------------------#
-print('Lets Start With Creating The Sitting Space For The Cinema')
-rows = int(input("Enter the number of rows:"))
-seats = int(input("Enter the number of seats per row:"))
+print(color.BOLD + color.WHITE +'Lets Start With Creating The Sitting Space For The Cinema'+ color.END)
+rows = int(input(color.BOLD + color.WHITE +"Enter the number of rows:"+ color.END))
+seats = int(input(color.BOLD + color.WHITE +"Enter the number of seats per row:"+ color.END))
 sc=TheatreclassObjects.Theatre(rows,seats)
 #----------------------------------------------------------------------------#
 
 print(color.BOLD + color.RED + 'WELCOME TO THE TANISHQ CINEMAS'+ color.END)
-print('Which Movie Do You Want To Watch ?\nType Name')
+print(color.BOLD + color.WHITE +'Which Movie Do You Want To Watch ?\nEnter Movie Name -'+ color.END)
 s=input()
-print('----------Audi 1 Available For',s,'Kindly Book Your Seat----------')
+print('----------Audi 1 Available For',s.upper(),'Kindly Book Your Seat----------')
 
 def Menu():
     print(color.BOLD + color.DARKCYAN +'1: Show the Seats'+ color.END)
@@ -37,7 +37,7 @@ def Menu():
         sc.BookedTicketUserInfo()
         Menu()
     elif choice=='0':
-        print(color.BOLD + color.GREEN +'Thank You For Visiting Tanishq Cinemas....'+ color.END)
+        print(color.BOLD + color.GREEN +'Thank You For Visiting Tanishq Cinemas | We Love To See You Again.'+ color.END)
         exit()
     else:
         print('Kindly Choose From the Given Options.')
