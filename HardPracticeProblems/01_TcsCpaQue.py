@@ -42,7 +42,7 @@ l=[obj1,obj2,obj3,obj4]
 def calculateEmployeeSalaryByRole(role,list1,dict1):
     for i in list1:
         if i.role == role:
-            newinc=Employee.calculateincentive(i,d)z
+            newinc=Employee.calculateincentive(i,d)
             newsalary = i.salary + newinc
             print(i.employeeid,i.employeename,newsalary)
 
