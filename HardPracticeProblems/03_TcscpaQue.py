@@ -92,11 +92,12 @@ class Library:
                 return True
         else:
             return False
-    
+
     def FindcostliestBook(self,authname):
         maxp=0
         maxpbn=None
         for i in self.booklist:
+            print(i.authorname)
             if i.authorname.lower()==authname.lower():
                 if i.bookprice>maxp:
                     maxp=i.bookprice
