@@ -127,12 +127,12 @@ a1=lobj.IssueBook(inpbktitle,inpbktype)
 a2=lobj.FindcostliestBook(inpauthname)
 
 if a1==False:
-    print('Book not found')
+    print('Book not found.')
 else:
     for i in blist:
         print(i.booktitle,'->',i.status)
 
 if a2==None:
-    print('Author not found')
+    print('Author not found.')
 else:
     print(a2.booktitle)
