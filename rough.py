@@ -27,19 +27,3 @@
 # for i in range(t):
 #     k=int(input())
 #     fir(k)
-t=int(input())
-for i in range(t):
-    n,m=input().split()
-    n=int(n)
-    m=int(m)
-    c=0
-    b=n
-    a=1
-    while b>a:
-        a=b-1
-        while a>=1:
-            if (m-(m%b))%a==0:
-                c+=1
-            a-=1
-        b-=1
-    print(c)
