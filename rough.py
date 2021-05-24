@@ -27,3 +27,7 @@
 # for i in range(t):
 #     k=int(input())
 #     fir(k)
+Cubes = (1, 8, 27, 64, 125, 216)
+cube = iter(Cubes)
+next(cube)
+print(next(cube))
