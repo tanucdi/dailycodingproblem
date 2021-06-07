@@ -10,7 +10,7 @@ classifiers = [
  
 setup(
   name='TanishkPrimenumber',
-  version='0.0.1',
+  version='0.0.2',
   description='A very basic prime number printing module',
   long_description=open('README.md').read() + '\n\n' + open('CHANGELOG.txt').read(),
   url='',  
