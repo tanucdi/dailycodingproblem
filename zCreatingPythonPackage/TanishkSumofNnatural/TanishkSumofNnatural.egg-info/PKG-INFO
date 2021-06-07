@@ -1,0 +1,27 @@
+Metadata-Version: 1.1
+Name: TanishkSumofNnatural
+Version: 0.0.1
+Summary: A very basic sum of n natural number printing module
+Home-page: UNKNOWN
+Author: Tanishk Chaturvedi
+Author-email: tanucdi7@gmail.com
+License: MIT
+Description: #THIS IS A VERY SIMPLE PROGRAM THAT PRINTS SUM OF (N) NATURAL NUMBER IN THE MOST EFFICIENT WAY.
+        
+        Change Log
+        ============
+        
+        0.0.1 (07/06/2021)
+        -------------------
+        - First Release
+        
+        0.0.2 (07/06/2021)
+        -------------------
+        - Second Release
+Keywords: Sum of Natural Number
+Platform: UNKNOWN
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Education
+Classifier: Operating System :: Microsoft :: Windows :: Windows 10
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
