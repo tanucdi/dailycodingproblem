@@ -27,3 +27,10 @@
 # for i in range(t):
 #     k=int(input())
 #     fir(k)
+from num2words import num2words
+  
+# Most common usage.
+print(num2words(36))
+  
+# Other variants, according to the type of article.
+print(num2words(36, to = 'ordinal'))
